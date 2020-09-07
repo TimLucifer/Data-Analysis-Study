@@ -1,0 +1,10 @@
+Python list在系统内存中的存储是分散的，NumPy数组存放在一个连续的内存块中。遍历时不需要像List一样对内存地址查找。
+在内存访问模式中，缓存会直接将字节块从RAM加载到CPU寄存器中。因为连续存储在内存中，NumPy会直接利用CPU的矢量化指令计算，加载寄存器中的多个连续浮点数，NumPy中的矩阵计算可以采用多线程的方式，领用多核CPU计算资源。
+提高计算资源利用率：避免采用隐式拷贝，采用就地操作的方式。[  x*=2 not y = x*2   ]
+
+NumPy中的两个重要对象: ndarray(N-dimensional array object)解决多维数组问题，ufunc(universal function object)解决对数组进行处理的函数
+
+
+ndarray：
+	多维数组。在NumPy数组中，维数称为秩(rank)， 一维数组的秩为1，二维为2，以此类推。每一个线性的数组称为一个轴(axes)，秩就是描述轴的数量。
+
