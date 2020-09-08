@@ -1,0 +1,21 @@
+**  Pandas  **
+Pandas提供的基础数据结构DataFrame与json契合度很高，方便转换。
+Pandas基于NumPy构建的含有更高级数据结构的分析能力的工具包。
+
+两个核心数据结构：
+**  Series  **：
+    定长的字典序列。在存储的时候，相当于两个ndarray。在字典结构中，元素的个数不固定。
+    两个基本属性：index， values。
+        index默认0,1,2,......递增的整数序列。也可以自己指定索引，比如：
+        index = ['a', 'b', 'c', 'd']
+
+**  DataFrame  **：
+    数据结构类似数据库表。
+    包括行索引和列索引，可以将DaraFrame看成是由相同索引的Series组成的字典类型。
+
+
+数据导入和输出
+Pandas允许直接从xlsx，csv等文件中导入数据，也可以输出到xlsx，csv等文件中
+
+数据清洗
+(详见Pandas_work)
